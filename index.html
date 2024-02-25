@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" type="text/css" href="static/css/config.css">
+    <link rel="stylesheet" type="text/css" href="static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+</head>
+
+<body>
+    <header id="portfolio-header" class="dark-header">
+        <div id="link-language-container">
+            <div id="contact-link-container">
+                <img src="static/img/white-linkedin.png" class="linkedin-img dark-img">
+                <img src="static/img/white-github.png" class="github-img dark-img">
+
+                <img src="static/img/black-linkedin.png" class="linkedin-img light-img" style="display: none;">
+                <img src="static/img/black-github.png" class="github-img light-img" style="display: none;">
+            </div>
+
+            <img id="language-image" src="static/img/white-world.png" class="dark-img">
+
+            <img id="language-image" src="static/img/black-world.png" class="light-img" style="display: none;">
+        </div>
+        <div id="apresentation-container">
+            <div id="apresentation-container-text">
+                <h1> BRENO MOREIRA </h1>
+                <h3> Desenvolvedor <span> &#60;/back-end&#62; </span> </h3>
+            </div>
+        </div>
+        <div id="theme-container">
+            <img src="static/img/black-moon.png" class="moon-img dark-img" style="display: none;">
+            <img src="static/img/white-moon.png" class="moon-img light-img">
+
+            <div id="theme-int">
+                <div id="circle"></div>
+            </div>
+
+            <img src="static/img/black-sun.png" class="sun-img dark-img" style="display: none;">
+            <img src="static/img/white-sun.png" class="sun-img light-img">
+        </div>
+    </header>
+
+    <script>
+        document.getElementById("theme-int").addEventListener("click", function (event) {
+            event.preventDefault();
+
+            document.getElementById("theme-int").classList.toggle("light");
+            document.body.classList.toggle("light-theme");
+
+            var lightImages = document.querySelectorAll(".light-img");
+            var darkImages = document.querySelectorAll(".dark-img");
+
+            lightImages.forEach(function (image) {
+                image.style.display = image.style.display === "none" ? "block" : "none";
+            });
+
+            darkImages.forEach(function (image) {
+                image.style.display = image.style.display === "none" ? "block" : "none";
+            });
+        });
+    </script>
+</body>
+
+</html>
