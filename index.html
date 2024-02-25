@@ -15,16 +15,25 @@
     <header id="portfolio-header" class="dark-header">
         <div id="link-language-container">
             <div id="contact-link-container">
-                <img src="static/img/white-linkedin.png" class="linkedin-img dark-img">
-                <img src="static/img/white-github.png" class="github-img dark-img">
+                <img onclick="window.open('https://www.linkedin.com/in/breno-am/', '_blank');"
+                    src="static/img/white-linkedin.png" class="linkedin-img dark-img interact-image">
 
-                <img src="static/img/black-linkedin.png" class="linkedin-img light-img" style="display: none;">
-                <img src="static/img/black-github.png" class="github-img light-img" style="display: none;">
+                <img onclick="window.open('https://github.com/brenohmoreira', '_blank');"
+                    src="static/img/white-github.png" class="github-img dark-img interact-image">
+
+                <img onclick="window.open('https://www.linkedin.com/in/breno-am/', '_blank');"
+                    src="static/img/black-linkedin.png" class="linkedin-img light-img interact-image"
+                    style="display: none;">
+
+                <img onclick="window.open('https://github.com/brenohmoreira', '_blank');"
+                    src="static/img/black-github.png" class="github-img light-img interact-image"
+                    style="display: none;">
             </div>
 
-            <img id="language-image" src="static/img/white-world.png" class="dark-img">
+            <img id="language-image" src="static/img/white-world.png" class="dark-img interact-image">
 
-            <img id="language-image" src="static/img/black-world.png" class="light-img" style="display: none;">
+            <img id="language-image" src="static/img/black-world.png" class="light-img interact-image"
+                style="display: none;">
         </div>
         <div id="apresentation-container">
             <div id="apresentation-container-text">
@@ -45,25 +54,7 @@
         </div>
     </header>
 
-    <script>
-        document.getElementById("theme-int").addEventListener("click", function (event) {
-            event.preventDefault();
-
-            document.getElementById("theme-int").classList.toggle("light");
-            document.body.classList.toggle("light-theme");
-
-            var lightImages = document.querySelectorAll(".light-img");
-            var darkImages = document.querySelectorAll(".dark-img");
-
-            lightImages.forEach(function (image) {
-                image.style.display = image.style.display === "none" ? "block" : "none";
-            });
-
-            darkImages.forEach(function (image) {
-                image.style.display = image.style.display === "none" ? "block" : "none";
-            });
-        });
-    </script>
+    <script src="static/js/theme-changer.js"></script>
 </body>
 
 </html>

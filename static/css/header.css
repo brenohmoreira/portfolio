@@ -6,6 +6,10 @@ header {
     flex-direction: column;
 }
 
+.interact-image {
+    cursor: pointer;
+}
+
 #link-language-container {
     width: 100%;
     display: flex;
